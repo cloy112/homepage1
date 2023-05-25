@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.3;
+        color: white;
+      }
+
+      h1 {
+        font-family: "Outfit", sans-serif;
+        color: #333;
+        text-align: center;
+        font-size: 6rem;
+      }
+
+      h2 {
+        font-family: "Outfit", sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      p {
+        font-family: "Outfit", sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-style: groove;
+        border-color: #333;
+        background: white;
+        z-index: 10;
+      }
+
+      #front_page {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(90, 90, 90, 0.3);
+      }
+
+      .mapa {
+        width: 56.6vw;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: 37vw;
+      }
+
+      .info_sq {
+        position: fixed;
+        right: 45px;
+        bottom: 250px;
+        width: 30vw;
+        height: 60vh;
+        border-radius: 10px;
+        background-color: rgb(129, 114, 114);
+      }
+
+      area:hover {
+        cursor: pointer;
+      }
+
+      area[title]:hover:after {
+        content: attr(title);
+        padding: 20px;
+        color: #fff;
+        background-color: #333;
+        position: fixed;
+        z-index: 9999;
+        left: 81%;
+        top: 46%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 25px;
+      }
+
+      .info_sq {
+        position: fixed;
+        padding-top: 35px;
+        padding-right: 30px;
+        padding-left: 30px;
+        right: 26px;
+        top: 250px;
+        width: 35vw;
+        height: 18vh;
+        border-radius: 10px;
+        background-color: #444;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </head>
+
+  <body>
+    <section id="Front_page">
+      <div class="info_sq">
+        <br />
+        <h2>Hover on a municipality to know more!</h2>
+      </div>
+      <div id="bohol-map">
+        <img
+          class="mapa"
+          src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/336625436_738254948018056_226866535781559521_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHXcyYSYk8Fh6V09UpV6HdQSpdiDP58Q8xKl2IM_nxDzPwOms7olaISM_IhcWEVCqGFb3-ZkuBpZa7y6KymMaK6&_nc_ohc=RVDEH06UQXsAX9KbGs9&_nc_ht=scontent.fceb2-1.fna&oh=03_AdTY0rhOwczIPdJQgqlJgJS9W-TfWteY8vwRGS53h6zd5g&oe=64467495"
+          alt="map"
+          usemap="#map"
+        />
+
+        <map name="map">
+          <area
+            shape="circle"
+            coords="560, 610, 50"
+            alt="Abijilan"
+            title="ABIJILAN - Population: 1,556 Households: 309 "
+            href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/abijilan.html"
+          />
+          <area
+          shape="circle"
+          coords="650, 700, 50"
+          alt="Antipolo"
+          title="ANTIPOLO - Population: 695 Households: 130 "
+          href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/antipolo.html"
+        />
+        <area
+        shape="circle"
+        coords="440, 600, 30"
+        alt="Basiao"
+        title="BASIAO - Population: 543 Households: 120 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/basiao.html"
+      />
+      <area
+      shape="circle"
+      coords="440, 220, 50"
+      alt="Cagwang"
+      title="CAGWANG - Population: 244 Households: 54 "
+      href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/cagwang.html"
+    />
+    <area
+    shape="circle"
+    coords="520, 810, 20"
+    alt="Calma"
+    title="CALMA - Population: 927 Households: 169 "
+    href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/calma.html"
+  />
+  <area
+  shape="circle"
+  coords="240, 180, 90"
+  alt="Cambuyo"
+  title="CAMBUYO - Population: 650  Households: 115 "
+  href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/cambuyo.html"
+  />
+  <area
+  shape="circle"
+  coords="620, 820, 30"
+  alt="Canayaon East"
+  title="CANAYAON EAST - Population: 996 Households: 195"
+  href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/canayaon-east.html"
+/>
+<area
+shape="circle"
+coords="550, 860, 25"
+alt="Canayaon West"
+title="CANAYAON WEST - Population: 924 Households: 215 "
+href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/canayaon-west.html"
+/>
+<area
+        shape="circle"
+        coords="250, 500, 50"
+        alt="CANDANAS"
+        title="CANDANAS - Population: 796 Households: 166"
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/candanas.html"
+      />
+      <area
+        shape="circle"
+        coords="480, 730, 50"
+        alt="candulao"
+        title="CANDULAO - Population: 456 Households: 87"
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/candulao.html"
+      />
+      <area
+        shape="circle"
+        coords="480, 450, 50"
+        alt="catmon"
+        title="CATMON - Population: 236 Households:46 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/catmon.html"
+      />
+      <area
+        shape="circle"
+        coords="310, 960, 20"
+        alt="Cayam"
+        title="Cayam - Population:1,254  Households:231 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/cayam.html"
+      />
+      <area
+        shape="circle"
+        coords="330, 560, 40"
+        alt="Cupa"
+        title="Cupa - Population:208  Households:53 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/cupa.html"
+      />
+      <area
+        shape="circle"
+        coords="360, 100, 40"
+        alt="Datag"
+        title="Datag - Population:1,252  Households:250 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/datag.html"
+      />
+      <area
+        shape="circle"
+        coords="440, 360, 40"
+        alt="Estaca"
+        title="Estaca - Population:175  Households:46 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/estaca.html"
+      />
+      <area
+        shape="circle"
+        coords="340, 870, 40"
+        alt="libertad"
+        title="Libertad - Population:429  Households:90 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/libertad.html"
+      />
+      <area
+        shape="circle"
+        coords="410, 930, 20"
+        alt="Lungsodaan East"
+        title="Lungsodaan East - Population:1,013  Households:221 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/lungsodaan-east.html"
+      />
+      <area
+        shape="circle"
+        coords="350, 930, 20"
+        alt="Lungsodaan West"
+        title="Lungsodaan West - Population:1,110  Households:213"
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/lungsodaan-west.html"
+      />
+      <area
+        shape="circle"
+        coords="220, 900, 50"
+        alt="malinao"
+        title="Malinao - Population:1,239  Households:218 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/malinao.html"
+      />
+      <area
+        shape="circle"
+        coords="507, 880, 20"
+        alt="Manaba"
+        title="Manaba - Population:1,835  Households:370 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/manaba.html"
+      />
+      <area
+        shape="circle"
+        coords="280, 340, 50"
+        alt="Pasong"
+        title="Pasong - Population:1,097  Households:224 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/pasong.html"
+      />
+      <area
+        shape="circle"
+        coords="460, 855, 20"
+        alt="poblacion east"
+        title="Poblacion East - Population:1,262  Households:316 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/poblacion-east.html"
+      />
+      <area
+        shape="circle"
+        coords="430, 865, 18"
+        alt="poblacion west"
+        title="Poblacion West - Population:995  Households:201 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/poblacion-west.html"
+      />
+      <area
+        shape="circle"
+        coords="465, 650, 20"
+        alt="sacaon"
+        title="Sacaon - Population:622  Households:135 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/sacaon.html"
+      />
+      <area
+        shape="circle"
+        coords="250, 680, 70"
+        alt="Sampong"
+        title="Sampong - Population:293  Households:53 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/sampong.html"
+      />
+      <area
+        shape="circle"
+        coords="440, 540, 30"
+        alt="tabuan"
+        title="Tabuan - Population:1,405  Households:311 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/tabuan.html"
+      />
+      <area
+        shape="circle"
+        coords="560, 500, 30"
+        alt="togbongon"
+        title="Togbongon - Population:312  Households:70 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/togbongon.html"
+      />
+      <area
+        shape="circle"
+        coords="730, 800, 40"
+        alt="ubujan east"
+        title="Ubujan East - Population:629  Households:158 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/ulbujan-east.html"
+      />
+      <area
+        shape="circle"
+        coords="670, 780, 20"
+        alt="Ubujan west"
+        title="Ubujan West - Population:935  Households:161 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/ulbujan-west.html"
+      />
+      <area
+        shape="circle"
+        coords="570, 780, 30"
+        alt="victoria"
+        title="Victoria - Population:342  Households:66 "
+        href="https://www.philatlas.com/visayas/r07/bohol/garcia-hernandez/victoria.html"
+      />
+        
+      
+        </map>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- 
+    more left - right
+    less left - left
+
+    more right - down
+    less right - up
+        
+-->
